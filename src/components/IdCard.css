@@ -1,0 +1,16 @@
+/* <span className="IdCard">
+<span className="lastName">{props.lastName}</span>
+<span className="firstName">{props.firstName}</span>
+<span className="gender">{props.gender}</span>
+<span className="height">{props.height}</span>
+<span className="birth">{props.birth.toLocaleDateString()}</span>
+<span className="picture">{props.picture}</span>
+</span> */
+
+.div {
+    border-width: 2px;
+    border-color: bisque;
+    justify-content: center;
+    
+
+}
