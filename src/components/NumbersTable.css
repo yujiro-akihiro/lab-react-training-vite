@@ -1,8 +1,8 @@
 .numbersTable {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
 .number {
   display: flex;
   justify-content: center;

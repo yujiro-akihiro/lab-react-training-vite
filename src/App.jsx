@@ -133,6 +133,7 @@ function App() {
       <SignupPage />
       <br />
       <RGBColorPicker />
+      <br />
     </div>
   );
 }
