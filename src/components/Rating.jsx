@@ -14,7 +14,6 @@ const Rating = ({ children }) => {
   for (let i = 0; i < emptyStars; i++) {
     stars.push(emptyStar);
   }
-
   return (
     <div>
       {stars.map((star, index) => (
