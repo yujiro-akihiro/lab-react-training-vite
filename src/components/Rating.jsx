@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Rating = ({ children }) => {
   const filledStars = Math.round(children);
   const emptyStars = 5 - filledStars;
 
-  const filledStar = '★';
-  const emptyStar = '☆';
+  const filledStar = "★";
+  const emptyStar = "☆";
 
   const stars = [];
   for (let i = 0; i < filledStars; i++) {
@@ -23,6 +23,5 @@ const Rating = ({ children }) => {
     </div>
   );
 };
-
 
 export default Rating;
