@@ -1,14 +1,18 @@
+// BoxColor.jsx
 import React from "react";
+import "./BoxColor.css";
 
 const BoxColor = ({ r, g, b }) => {
   const divStyle = {
     backgroundColor: `rgb(${r}, ${g}, ${b})`,
-    width: "200px",
-    height: "100px",
-    margin: "10px",
   };
 
-  return <div style={divStyle}></div>;
+  return (
+    <div className="BoxContainer">
+      <div style={divStyle} className="ColorBox">
+      <p className="rgb">rgb({r}, {g}, {b})</p>
+      </div></div>
+  );
 };
 
 export default BoxColor;

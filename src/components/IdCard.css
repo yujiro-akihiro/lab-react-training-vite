@@ -1,16 +1,18 @@
-/* <span className="IdCard">
-<span className="lastName">{props.lastName}</span>
-<span className="firstName">{props.firstName}</span>
-<span className="gender">{props.gender}</span>
-<span className="height">{props.height}</span>
-<span className="birth">{props.birth.toLocaleDateString()}</span>
-<span className="picture">{props.picture}</span>
-</span> */
+.idCard {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
 
-.div {
-    border-width: 2px;
-    border-color: bisque;
-    justify-content: center;
-    
+.idCard-img img {
+    max-height: 150px;
+    margin-right: 20px;
+}
 
+.idInfo p {
+    margin: 5px 0;
 }

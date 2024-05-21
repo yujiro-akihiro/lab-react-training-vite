@@ -1,22 +1,38 @@
-import React from 'react';
+import React from "react";
+import masterCard from "../assets/images/master-card.svg";
+import visaCard from "../assets/images/visa.png";
+import "./CreditCard.css"
 
-class CreditCard extends React.Component {
-  render() {
-    const { type, number, expirationMonth, expirationYear, bank, owner, bgColor, color } = this.props;
+const CreditCard = (props) => {
+  const {
+    type,
+    number,
+    expirationMonth,
+    expirationYear,
+    bank,
+    owner,
+    bgColor,
+    color,
+  } = props;
 
-    // クレジットカード番号の最後の4桁を表示する
-    const last4Digits = number.slice(-4);
+  const last4Digits = number.slice(-4);
+  const cardTypeImage = type === "Visa" ? visaCard : masterCard;
 
-    return (
-      <div className="CreditCard" style={{ backgroundColor: bgColor, color: color }}>
-        <div>Type: {type}</div>
-        <div>Number: **** **** **** {last4Digits}</div>
-        <div>Expires: {expirationMonth}/{expirationYear}</div>
-        <div>Bank: {bank}</div>
-        <div>Owner: {owner}</div>
+  return (
+    <div className="creditCard" style={{ backgroundColor: bgColor, color: color }}>
+      <div className="creditCard-type">
+        <img src={cardTypeImage} alt={type} width={100}/>
       </div>
-    );
-  }
-}
+      <div className="creditCard-number">
+        •••• •••• •••• {last4Digits}
+      </div>
+      <div className="creditCard-expiry-bank">
+        <span>Expires {expirationMonth}/{expirationYear}</span>
+        <span>{bank}</span>
+      </div>
+      <div className="creditCard-owner">{owner}</div>
+    </div>
+  );
+};
 
 export default CreditCard;

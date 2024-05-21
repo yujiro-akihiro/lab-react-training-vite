@@ -1,4 +1,5 @@
 import React from 'react';
+import './Greeting.css';
 
 function Greetings(props) {
     let greeting = '';
@@ -10,7 +11,7 @@ function Greetings(props) {
             greeting = `Hello ${props.children}`;
             break;
         case 'es':
-            greeting = `Ola ${props.children}`;
+            greeting = `Hola ${props.children}`;
             break;
         case 'fr':
             greeting = `Bonjour ${props.children}`;
@@ -20,7 +21,7 @@ function Greetings(props) {
             break;
     }
 
-    return <div>{greeting}</div>;
+    return <div className="greetings">{greeting}</div>;
 }
 
 export default Greetings;
